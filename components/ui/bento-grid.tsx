@@ -304,9 +304,9 @@ export const BentoGridItem = ({
           </Link>
           <Link target="blank" href={"https://www.instagram.com/_imran_syam_/?hl=en"} className="relative  h-8 w-8 ">
             <Image
-              src={"/instagram.svg"}
+              src={"/instagram.webp"}
               fill
-              className="object-cover object-center shrink-0 "
+              className="object-cover object-center scale-150 shrink-0 "
               alt=""
             />
           </Link>
@@ -314,7 +314,7 @@ export const BentoGridItem = ({
             <Image
               src={"/discord.webp"}
               fill
-              className="object-cover object-center shrink-0"
+              className="object-cover object-center scale-110 shrink-0"
               alt=""
             />
           </Link>
@@ -322,7 +322,7 @@ export const BentoGridItem = ({
             <Image
               src={"/linkedin.webp"}
               fill
-              className="object-cover object-center shrink-0"
+              className="object-cover scale-90 object-center shrink-0"
               alt=""
             />
           </Link>
