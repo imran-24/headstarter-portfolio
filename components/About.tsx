@@ -3,13 +3,13 @@ import Image from "next/image"
 
 const About = () => {
   return (
-    <div className="min-w-80 flex items-start lg:flex-col space-y-4 space-x-4">
+    <div className="min-w-80   flex items-start lg:flex-col space-y-4 space-x-4">
         <div>
-            <div className="relative h-32 w-32 rounded-full">
+            <div className="relative h-28 w-28 lg:mb-4 mr-4 lg:mr-0  rounded-full">
             <Image
               src={"/imran.jpeg"}
               fill
-              className="object-center rounded-full aspect-square grayscale object-cover"
+              className="object-center rounded-full aspect-square scale-125  grayscale object-cover"
               alt=""
             />
               </div>

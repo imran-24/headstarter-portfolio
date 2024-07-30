@@ -103,52 +103,63 @@ export const BentoGridItem = ({
     >
       {id === 1 && (
         <div className="p-6 relative flex flex-col space-y-6  ">
-
           <div className="space-y-4">
             <div>
               <Image
-              src={"/logo.png"}
-              height={30}
-              width={40}
-              className="object-center border  p-1 rounded-lg  aspect-square  object-cover"
-              alt=""
-            />
+                src={"/logo.png"}
+                height={30}
+                width={40}
+                className="object-center border  p-1 rounded-lg  aspect-square  object-cover"
+                alt=""
+              />
             </div>
             <p className="text-sm">
-              I have some news to share. I am now a <span className="text-emerald-500 font-bold">
-                <Link href={"https://headstarter.co/"} className="underline underline-offset-2 und">Headstarter</Link> Software
-              Engineering fellow</span>. I will be building 5 AI projects in 5
-              weeks
+              I have some news to share. I am now a{" "}
+              <span className="text-emerald-500 font-bold">
+                <Link
+                  href={"https://headstarter.co/"}
+                  className="underline underline-offset-2 und"
+                >
+                  Headstarter
+                </Link>{" "}
+                Software Engineering fellow
+              </span>
+              . I will be building 5 AI projects in 5 weeks
             </p>
           </div>
-          <div className="relative aspect-[2/1]">
+          <div className="relative overflow-hidden  aspect-[2/1]">
             <Image
-            src={"/track-a.png"}
-            fill
-            className="object-center rounded-3xl  aspect-square  object-cover"
-            alt=""
-          />
+              src={"/track-a.png"}
+              fill
+              className="object-center rounded-3xl  aspect-square  object-cover"
+              alt=""
+            />
           </div>
         </div>
       )}
       {id === 2 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-[11.3rem] gap-2">
-          <div className="relative overflow-hidden col-span-1 row-span-1 md:row-span-2 border rounded-3xl group/bento hover:shadow-sm cursor-pointer transition duration-200 shadow-input dark:shadow-none ">
+        <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-[11.3rem] gap-2  ">
+          <div className="relative flex overflow-hidden col-span-1 row-span-1 md:row-span-2 border rounded-3xl group/bento hover:shadow-sm cursor-pointer transition duration-200 shadow-input dark:shadow-none ">
             <Image
               src={"/sea.jpg"}
               fill
               className="object-center object-cover"
               alt=""
             />
-            <Link target="blank" href="https://house-renting-iota.vercel.app/">
-            <Image
-              src={"/airbnb.png"}
-              fill
-              className="object-left-top md:pt-24 md:pl-10 lg:pt-32  lg:pl-16 md:scale-125 lg:scale-150  hover:scale-105 transition duration-200 ease-in-out  object-cover"
-              alt=""
-            />
+            <Link
+              className="relative h-full w-full rounded-tl-3xl overflow-hidden  md:mt-28 md:ml-14 lg:mt-36  lg:ml-20 md:scale-125 lg:scale-150  hover:scale-105 md:hover:scale-110 lg:hover:scale-125 transition duration-200 ease-in-out"
+              target="blank"
+              href="https://house-renting-iota.vercel.app/"
+            >
+              <div>
+                <Image
+                  src={"/airbnb.png"}
+                  fill
+                  className=" object-left-top   object-cover"
+                  alt=""
+                />
+              </div>
             </Link>
-            
           </div>
           <div className="hidden md:block  md:relative overflow-hidden col-span-1 row-span-1 border rounded-3xl group/bento hover:shadow-sm cursor-pointer transition duration-200 shadow-input dark:shadow-none ">
             {/* <Image
@@ -158,22 +169,25 @@ export const BentoGridItem = ({
               alt=""
             /> */}
           </div>
-          <div className=" relative overflow-hidden col-span-1 row-span-` border rounded-3xl group/bento hover:shadow-sm cursor-pointer transition duration-200 shadow-input dark:shadow-none ">
+          <div className=" relative flex overflow-hidden col-span-1 row-span-1 border rounded-3xl group/bento hover:shadow-sm cursor-pointer transition duration-200 shadow-input dark:shadow-none ">
             <Image
               src={"/window.jpg"}
               fill
               className="object-center object-cover"
               alt=""
             />
-            <Link target="blank" href="https://jotion-roan-three.vercel.app/">
-            <Image
-              src={"/notion.png"}
-              fill
-              className="object-left-top md:px-4 md:py-6 hover:scale-105 md:hover:scale-125 transition duration-200 ease-in-out  object-cover"
-              alt=""
-            />
+            <Link 
+            className="relative h-full w-full rounded-3xl overflow-hidden  hover:scale-105 md:hover:scale-125 transition duration-200 ease-in-out "
+            target="blank" href="https://jotion-roan-three.vercel.app/">
+              <div>
+                <Image
+                  src={"/notion.png"}
+                  fill
+                  className="object-left-top rounded-3xl overflow-hidden md:p-4  object-cover"
+                  alt=""
+                />
+              </div>
             </Link>
-            
           </div>
         </div>
       )}
@@ -294,7 +308,11 @@ export const BentoGridItem = ({
       )}
       {id === 8 && (
         <div className="flex items-center justify-end  px-4 space-x-2">
-          <Link target="blank" href={"https://web.facebook.com/imran.syam.56/"} className="relative  h-8 w-8">
+          <Link
+            target="blank"
+            href={"https://web.facebook.com/imran.syam.56/"}
+            className="relative  h-8 w-8"
+          >
             <Image
               src={"/fb.webp"}
               fill
@@ -302,7 +320,11 @@ export const BentoGridItem = ({
               alt=""
             />
           </Link>
-          <Link target="blank" href={"https://www.instagram.com/_imran_syam_/?hl=en"} className="relative  h-8 w-8 ">
+          <Link
+            target="blank"
+            href={"https://www.instagram.com/_imran_syam_/?hl=en"}
+            className="relative  h-8 w-8 "
+          >
             <Image
               src={"/instagram.webp"}
               fill
@@ -318,7 +340,11 @@ export const BentoGridItem = ({
               alt=""
             />
           </Link>
-          <Link target="blank" href={"https://www.linkedin.com/in/imran-syam-b8b216217/"} className="relative  h-8 w-8">
+          <Link
+            target="blank"
+            href={"https://www.linkedin.com/in/imran-syam-b8b216217/"}
+            className="relative  h-8 w-8"
+          >
             <Image
               src={"/linkedin.webp"}
               fill
@@ -326,7 +352,11 @@ export const BentoGridItem = ({
               alt=""
             />
           </Link>
-          <Link target="blank" href={"https://github.com/imran-24"} className="relative  h-8 w-8">
+          <Link
+            target="blank"
+            href={"https://github.com/imran-24"}
+            className="relative  h-8 w-8"
+          >
             <Image
               src={"/github.webp"}
               fill
@@ -334,7 +364,11 @@ export const BentoGridItem = ({
               alt=""
             />
           </Link>
-          <Link target="blank" href={"https://twitter.com/ImranSyam169132"} className="relative scale-125 h-8 w-8">
+          <Link
+            target="blank"
+            href={"https://twitter.com/ImranSyam169132"}
+            className="relative scale-125 h-8 w-8"
+          >
             <Image
               src={"/twitter.webp"}
               fill
