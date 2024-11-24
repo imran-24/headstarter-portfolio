@@ -6,7 +6,7 @@ type Props = {}
 
 const Grid = (props: Props) => {
   return (
-    <BentoGrid className="w-full md:max-w-4xl mx-auto">
+    <BentoGrid className="w-full md:max-w-7xl mx-auto">
       {gridItems.map(({id, title, description, className, img, imgClassName, spareImg, titleClassName}) => (
         <BentoGridItem
           id={id}
@@ -35,7 +35,7 @@ export const gridItems = [
     id: 1,
     title: "I prioritize client collaboration, fostering open communication ",
     description: "",
-    className: "col-span-2 sm:col-span-3 row-span-4",
+    className: "col-span-2 sm:col-span-3 row-span-4 justify-start",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end bottom-0 ",
     img: "/b1.svg",
@@ -45,7 +45,7 @@ export const gridItems = [
     id: 2,
     title: "",
     description: "",
-    className: "border-none col-span-2 sm:col-span-5 row-span-4   ",
+    className: "border-none col-span-2 sm:col-span-6 row-span-4   ",
     imgClassName: "",
     titleClassName: "sm:text-center top-0",
     img: "",
@@ -65,7 +65,7 @@ export const gridItems = [
     id: 4,
     title: "",
     description: "",
-    className: " sm:col-span-2 row-span-2",
+    className: " sm:col-span-3 row-span-2",
     imgClassName: "",
     titleClassName: "justify-start",
     img: "/grid.svg",
@@ -87,7 +87,7 @@ export const gridItems = [
     id: 6,
     title: "",
     description: "Do you want to start a project together?",
-    className: "col-span-2 sm:col-span-4 row-span-2 rounded-b-none",
+    className: "col-span-2 sm:col-span-3 row-span-2 rounded-b-none",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full text-center",
     img: "",
@@ -95,19 +95,29 @@ export const gridItems = [
   },
   {
     id: 7,
+    title: "Thinking",
+    description: "I constantly try to improve",
+    className: " sm:col-span-3 row-span-2",
+    imgClassName: "",
+    titleClassName: "justify-center top-0 bottom-0",
+    img: "",
+    spareImg: "",
+  },
+  {
+    id: 8,
     title: "Resume",
     description: "",
-    className: "sm:col-span-4 sm:row-span-1",
+    className: "sm:col-span-3 sm:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full text-center",
     img: "",
     spareImg: "",
   },
   {
-    id: 8,
+    id: 9,
     title: "Socials",
     description: "",
-    className: "sm:col-span-4 sm:row-span-1",
+    className: "sm:col-span-3 sm:row-span-1",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full text-center",
     img: "",
