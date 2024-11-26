@@ -5,13 +5,13 @@ import Image from "next/image";
 import Overlay from "../overlay";
 import { ProjectModal } from "../modals/project-modal";
 
-let interval: any;
+let flippingInterval: NodeJS.Timeout;
 
 type Card = {
   id: number;
   name: string;
   description: string;
-  href: string,
+  href: string;
   content: React.ReactNode;
   bgImage: string;
   tech: string;
@@ -20,84 +20,77 @@ type Card = {
 
 export const CardStack = ({
   items,
-  offset,
-  scaleFactor,
+  offset = 10,
+  scaleFactor = 0.06,
 }: {
   items: Card[];
   offset?: number;
   scaleFactor?: number;
 }) => {
-  const CARD_OFFSET = offset || 10;
-  const SCALE_FACTOR = scaleFactor || 0.06;
+  const CARD_OFFSET = offset;
+  const SCALE_FACTOR = scaleFactor;
   const [cards, setCards] = useState<Card[]>(items);
 
   useEffect(() => {
     startFlipping();
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => {
+      if (flippingInterval) clearInterval(flippingInterval);
+    };
+  }, [items]);
+
   const startFlipping = () => {
-    interval = setInterval(() => {
-      setCards((prevCards: Card[]) => {
-        const newArray = [...prevCards]; // create a copy of the array
-        newArray.unshift(newArray.pop()!); // move the last element to the front
-        return newArray;
+    flippingInterval = setInterval(() => {
+      setCards((prevCards) => {
+        const newCards = [...prevCards];
+        newCards.unshift(newCards.pop()!); // Rotate the last card to the top
+        return newCards;
       });
-    }, 5000);
+    }, 3000); // Flip every 3 seconds
   };
 
   return (
-    <div className='relative  h-[21.5rem] w-full '>
-      {cards.map((card, index) => {
-        return (
-          <ProjectModal project={card}  key={card.id}>
-          <div  className="group">
-            <Overlay />
-
+    <div className="relative h-[21.5rem] w-full">
+      {cards.map((card, index) => (
+        // <ProjectModal project={card} >
+          <div key={card.id}  className="group">
+            {/* <Overlay /> */}
             <motion.div
-            
-            className='absolute dark:bg-black bg-white h-[21.5rem] w-full  rounded-3xl p-4 shadow-md  overflow-hidden dark:border-white/[0.1]  shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col space-y-2  justify-center'
-            style={{
-              transformOrigin: "top center",
-            }}
-            animate={{
-              top: index * -CARD_OFFSET,
-              scale: 1 - index * SCALE_FACTOR, // decrease scale for cards that are behind
-              zIndex: cards.length - index, //  decrease z-index for the cards that are behind
-            }}
-          >
-            <Image
-              src={card.bgImage}
-              fill
-              className='object-center object-cover -z-10'
-              alt=''
-            />
-            <div className='z-50 font-normal text-white dark:text-neutral-200'>
-              {card.content}
-            </div>
-            <div className='mx-auto'>
+              className="absolute dark:bg-black bg-white h-[21.5rem] w-full rounded-3xl p-4 shadow-md overflow-hidden dark:border-white/[0.1] shadow-black/[0.1] dark:shadow-white/[0.05] flex flex-col space-y-2 justify-center"
+              style={{
+                transformOrigin: "top center",
+              }}
+              animate={{
+                top: index * -CARD_OFFSET,
+                scale: 1 - index * SCALE_FACTOR, // Reduce size for cards behind
+                zIndex: cards.length - index, // Adjust z-index based on position
+              }}
+              transition={{
+                duration: 0.5, // Smooth animation
+              }}
+            >
               <Image
-                src={card.projectImages[0]}
-                width={500}
-                height={500}
-                alt='linear demo image'
-                className='object-contain rounded-2xl'
+                src={card.bgImage}
+                fill
+                className="object-center object-cover -z-10"
+                alt={`Background of ${card.name}`}
               />
-            </div>
-
-            {/* <div>
-              <p className='text-neutral-500 font-medium dark:text-white'>
-                {card.name}
-              </p>
-              <p className='text-neutral-400 font-normal dark:text-neutral-200'>
-                {card.designation}
-              </p>
-            </div> */}
-          </motion.div>
+              <div className="z-50 font-normal text-white dark:text-neutral-200">
+                {card.content}
+              </div>
+              <div className="mx-auto">
+                <Image
+                  src={card.projectImages[0]}
+                  width={500}
+                  height={500}
+                  alt={`Preview of ${card.name}`}
+                  className="object-contain rounded-2xl"
+                />
+              </div>
+            </motion.div>
           </div>
-          </ProjectModal>
-        );
-      })}
+        // </ProjectModal>
+      ))}
     </div>
   );
 };

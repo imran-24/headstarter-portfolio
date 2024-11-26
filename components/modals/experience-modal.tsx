@@ -44,10 +44,10 @@ export function ExperienceModal() {
     <div className='w-full flex items-center justify-center'>
       <Modal>
         <ModalTrigger className='bg-black dark:bg-white dark:text-black text-white flex justify-center group/modal-btn w-full relative'>
-          <span className='group-hover/modal-btn:translate-x-56 text-center transition duration-500 text-2xl lg:text-3xl font-bold text-white relative z-20'>
+          <span className='group-hover/modal-btn:translate-x-80 text-center transition duration-500 text-2xl sm:text-3xl  lg:text-5xl font-bold text-white relative z-20'>
             Experience
           </span>
-          <div className='-translate-x-56 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20'>
+          <div className='-translate-x-80 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20'>
             🚀
           </div>
         </ModalTrigger>

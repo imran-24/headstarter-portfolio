@@ -11,6 +11,8 @@ import Skills from "../skills";
 import Experience from "../experience";
 import Contact from "../contact";
 import Updates from "../updates";
+import { BackgroundLines } from "./background-lines";
+import { MoreProjects } from "../more-projects";
 
 export const BentoGrid = ({
   className,
@@ -93,11 +95,16 @@ export const BentoGridItem = ({
         <Skills />
       )}
       {id == 6 && (
-        <CopyEmail
-        copied={copied}
-        description={description}
-        handleCopy={handleCopy} />
-      )}
+          <MoreProjects />
+        )}
+      {
+        id === 7 && (
+          <CopyEmail
+          copied={copied}
+          description={description}
+          handleCopy={handleCopy} />
+        )
+      }
       {id === 8 && (
        <Resume /> 
       )}

@@ -32,7 +32,7 @@ export function ProjectModal({ children, project }: ProjectModalInterface) {
         <ModalTrigger className='group/modal-btn h-full  w-full overflow-hidden '>
           {children}
         </ModalTrigger>
-        <ModalBody className="bg-neutral-100">
+        <ModalBody className='bg-neutral-100'>
           <ModalContent>
             <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8 '>
               Explore my project:{" "}
@@ -71,35 +71,53 @@ export function ProjectModal({ children, project }: ProjectModalInterface) {
                 </motion.div>
               ))}
             </div>
-            <div className='py-10 flex flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto'>
+            <div className='py-10 flex flex-col  flex-wrap gap-x-4 gap-y-6 items-start justify-start max-w-sm mx-auto'>
               <div className='flex  items-start justify-center'>
                 <Dot className='mr-1 text-neutral-700 dark:text-neutral-300 h-6 w-6' />
                 <span className='text-neutral-700 dark:text-neutral-300 text-sm'>
-                 {project.description}
+                  {project.description}
                 </span>
               </div>
               <div className='flex items-start justify-center'>
-              <Dot className='mr-1 text-neutral-700 dark:text-neutral-300 h-6 w-6' />
-              <span className='text-neutral-700 dark:text-neutral-300 text-sm'>
+                <Dot className='mr-1 text-neutral-700 dark:text-neutral-300 h-6 w-6' />
+                <span className='text-neutral-700 dark:text-neutral-300 text-sm'>
                   {project.tech}
                 </span>
               </div>
-              <div className='flex items-start justify-center'>
-                <Dot className='mr-1 text-neutral-700 dark:text-neutral-300 h-4 w-4' />
-                <span className='text-neutral-700 dark:text-neutral-300 text-sm'>
-                  
-                </span>
-              </div>
-              
-              
+              {/* <div className='flex items-start justify-center'>
+                <Link
+                  target='blank'
+                  href={project.href}
+                  className='relative  h-8 w-8'
+                >
+                  <Image
+                    src={"/github.webp"}
+                    fill
+                    className='object-cover object-center shrink-0'
+                    alt=''
+                  />
+                </Link>
+              </div> */}
             </div>
           </ModalContent>
           <ModalFooter className='gap-4 bg-white'>
             <button className='px-2 py-1 bg-gray-200 text-black dark:bg-black dark:border-black dark:text-white border border-gray-300 rounded-md text-sm w-28'>
-              Cancel
+              <Link
+                target='blank'
+                href={project.href}
+                className='relative flex items-center text-center   h-8 w-8'
+              >
+                <Image
+                  src={"/github.webp"}
+                  width={20} height={20}
+                  className='object-cover object-center shrink-0 mr-3'
+                  alt=''
+                />
+                <span>Github</span>
+              </Link>
             </button>
             <button className='bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28'>
-              <Link target="_blank"  href={project.href}>
+              <Link target='_blank' href={project.href}>
                 Visit
               </Link>
             </button>
