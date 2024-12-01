@@ -72,7 +72,7 @@ export const CARDS = [
       bgImage: "/window.jpg",
       projectImages: ["/formify/1.png", "/formify/2.png", "/formify/3.png", "/formify/4.png"],
       tech: "Next js, Tailwind, Convex, Clurk Auth",
-      href: "https://formify-roan-three.vercel.app/",
+      href: "https://formify-jade.vercel.app/",
       position:"left",
       github: "https://github.com/imran-24/formify",
       content: (
@@ -89,12 +89,16 @@ export const CARDS = [
       bgImage: "/window.jpg",
       projectImages: ["/filestore/1.png", "/filestore/2.png", "/filestore/3.png", "/filestore/4.png"],
       tech: "React js, Tailwind, Firebase, firebase Auth",
-      href: "https://formify-roan-three.vercel.app/",
+      href: "https://file-store-9bc94.web.app/",
+      credentials:{
+        email: "test@gmail.com",
+        password: "12341234"
+      },
       position:"left",
-      github: "https://github.com/imran-24/firestore",
+      github: "https://github.com/imran-24/file-manager",
       content: (
         <p>
-          <Highlight>Jotion</Highlight> is an intuitive task management system
+          <Highlight>Firestore</Highlight> is an intuitive task management system
           with real-time updates.
         </p>
       ),

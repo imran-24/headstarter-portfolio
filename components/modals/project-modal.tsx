@@ -104,7 +104,7 @@ export function ProjectModal({ children, project }: ProjectModalInterface) {
             <button className='px-2 py-1 bg-gray-200 text-black dark:bg-black dark:border-black dark:text-white border border-gray-300 rounded-md text-sm w-28'>
               <Link
                 target='blank'
-                href={project.href}
+                href={project.github}
                 className='relative flex items-center text-center   h-8 w-8'
               >
                 <Image
