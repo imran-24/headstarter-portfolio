@@ -14,18 +14,19 @@ import { AnimatedTestimonials } from "../ui/animated-testimonials";
 
 const testimonials = [
   {
-    quote: `I was a
-Headstarter
-Software Engineering fellow
-. My job was to build 5 AI projects in 7 weeks.`,
+    quote: `As a
+Frontend Software Intern
+, my work was primarily focused on frontend development, but I also gained experience working on full-stack projects during my internship.`,
     name: "Itransition",
     designation: "Frontend Developer",
     src: "/experience/itransition_logo.jpeg",
   },
   {
-    quote: `As a
-Frontend Software Intern
-, my work was primarily focused on frontend development, but I also gained experience working on full-stack projects during my internship.`,
+    quote: `
+    I was a
+Headstarter
+Software Engineering fellow
+. My job was to build 5 AI projects in 7 weeks.`,
     name: "Headstarter",
     designation: "Software Engineer Fellowship",
     src: "/experience/theheadstarter_logo.jpeg",
