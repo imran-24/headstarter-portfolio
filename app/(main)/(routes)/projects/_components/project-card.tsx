@@ -1,4 +1,3 @@
-"use client";
 import { ProjectModal } from "@/components/modals/project-modal";
 import Overlay from "@/components/overlay";
 import { cn } from "@/lib/utils";
